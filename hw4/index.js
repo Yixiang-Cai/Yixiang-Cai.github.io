@@ -8,11 +8,11 @@ const HOSTED_URLS = {
 
 const examples = {
   'example1':
-      'As I was leaving the village one morning for a squirrel hunt, I fell in with a man who professed to be a billiard player.',
+      'Alice was beginning to get very tired of sitting by her sister on the bank.',
   'example2':
-      'Intelligence was also obtained of the arrival of Napoleon, and of his brother, Prince Jerome.',
+      'Buda-Pesth seems a wonderful place.',
   'example3':
-      'A very merry time followed the delivery of this speech, no one imagining it was said in sober earnestness.'      
+      'Scepticism was as much the result of knowledge, as knowledge is of scepticism.'      
 }
 
 function status(statusText) {
@@ -126,6 +126,8 @@ class Classifier {
     for (let i = 0; i < inputText.length; ++i) {
       const word = inputText[i];
       inputBuffer.set(this.wordIndex[word], 0, i);
+      
+      inputBuffer.toTensor().print();
       //console.log(word, this.wordIndex[word], inputBuffer);
     }
     const input = inputBuffer.toTensor();
