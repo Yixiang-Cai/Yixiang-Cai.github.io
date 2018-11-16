@@ -10,7 +10,7 @@ const examples = {
   'example1':
       'As I was leaving the village one morning for a squirrel hunt, I fell in with a man who professed to be a billiard player.',
   'example2':
-      ' Intelligence was also obtained of the arrival of Napoleon, and of his brother, Prince Jerome.',
+      'Intelligence was also obtained of the arrival of Napoleon, and of his brother, Prince Jerome.',
   'example3':
       'A very merry time followed the delivery of this speech, no one imagining it was said in sober earnestness.'      
 };
