@@ -127,7 +127,14 @@ class Classifier {
       const word = inputText[i];
       inputBuffer.set(this.wordIndex[word], 0, i);
       
+      
+      
+      
       inputBuffer.toTensor().print();
+    
+    
+      
+      
       //console.log(word, this.wordIndex[word], inputBuffer);
     }
     const input = inputBuffer.toTensor();
