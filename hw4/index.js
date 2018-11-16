@@ -4,7 +4,7 @@ const HOSTED_URLS = {
       'model_js/model.json',
   metadata:
       'model_js/metadata.json'
-};
+}
 
 const examples = {
   'example1':
@@ -13,34 +13,34 @@ const examples = {
       'Buda-Pesth seems a wonderful place.',
   'example3':
       'Scepticism was as much the result of knowledge, as knowledge is of scepticism.'      
-};
+}
 
 function status(statusText) {
   console.log(statusText);
   document.getElementById('status').textContent = statusText;
-};
+}
 
 function showMetadata(metadataJSON) {
   document.getElementById('vocabularySize').textContent =
       metadataJSON['vocabulary_size'];
   document.getElementById('maxLen').textContent =
       metadataJSON['max_len'];
-};
+}
 
 function settextField(text, predict) {
   const textField = document.getElementById('text-entry');
   textField.value = text;
   doPredict(predict);
-};
+}
 
 function setPredictFunction(predict) {
   const textField = document.getElementById('text-entry');
   textField.addEventListener('input', () => doPredict(predict));
-};
+}
 
 function disableLoadModelButtons() {
   document.getElementById('load-model').style.display = 'none';
-};
+}
 
 function doPredict(predict) {
   const textField = document.getElementById('text-entry');
@@ -52,7 +52,7 @@ function doPredict(predict) {
   //console.log(score_string);
   status(
       score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms)');
-};
+}
 
 function prepUI(predict) {
   setPredictFunction(predict);
@@ -61,7 +61,7 @@ function prepUI(predict) {
     settextField(examples[testExampleSelect.value], predict);
   });
   settextField(examples['example1'], predict);
-};
+}
 
 async function urlExists(url) {
   status('Testing url ' + url);
@@ -71,7 +71,7 @@ async function urlExists(url) {
   } catch (err) {
     return false;
   }
-};
+}
 
 async function loadHostedPretrainedModel(url) {
   status('Loading pretrained model from ' + url);
@@ -84,7 +84,7 @@ async function loadHostedPretrainedModel(url) {
     console.error(err);
     status('Loading pretrained model failed.');
   }
-};
+}
 
 async function loadHostedMetadata(url) {
   status('Loading metadata from ' + url);
@@ -97,7 +97,7 @@ async function loadHostedMetadata(url) {
     console.error(err);
     status('Loading metadata failed.');
   }
-};
+}
 
 class Classifier {
 
@@ -141,7 +141,7 @@ class Classifier {
 
     return {score: score, elapsed: (endMs - beginMs)};
   }
-};
+}
 
 async function setup() {
   if (await urlExists(HOSTED_URLS.model)) {
@@ -155,6 +155,6 @@ async function setup() {
   }
 
   status('Standing by.');
-};
+}
 
 setup();
