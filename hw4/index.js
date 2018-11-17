@@ -8,7 +8,7 @@ const HOSTED_URLS = {
 
 const examples = {
   'example1':
-      'As I was leaving the village one morning for a squirrel hunt, I fell in with a man who professed to be a billiard player.',
+      'And when the assembly had all taken their seats, Sakuni said to Yudhisthira: “The ground here has all been prepared, and the dice are all ready',
   'example2':
       'Intelligence was also obtained of the arrival of Napoleon, and of his brother, Prince Jerome.',
   'example3':
