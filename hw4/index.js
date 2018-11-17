@@ -129,6 +129,15 @@ class Classifier {
       //console.log(word, this.wordIndex[word], inputBuffer);
     }
     const input = inputBuffer.toTensor();
+    
+    
+    
+    
+    inputBuffer.toTensor().print();
+    
+    
+    
+    
     //console.log(input);
 
     status('Running inference');
